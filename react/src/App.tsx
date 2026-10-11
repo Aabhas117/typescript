@@ -3,6 +3,7 @@ import { ChaiCard } from './Components/ChaiCard.tsx'
 import { Counter } from './Components/Counter.tsx'
 import ChaiList from './Components/ChaiList.tsx';
 import type {Chai} from "./types.ts";
+import OrderForm from './Components/OrderForm.tsx';
 
 
 const menu: Chai[] = [
@@ -26,6 +27,13 @@ function App() {
      </div>
      <div>
       <ChaiList  items={menu}
+      />
+     </div>
+     <div>
+      <OrderForm
+      onSubmit={(order) => {
+        console.log("Placed", order.name, order.cups)
+      }}
       />
      </div>
     </>
