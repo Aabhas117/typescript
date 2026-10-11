@@ -4,7 +4,7 @@ import { Counter } from './Components/Counter.tsx'
 import ChaiList from './Components/ChaiList.tsx';
 import type {Chai} from "./types.ts";
 import OrderForm from './Components/OrderForm.tsx';
-
+import { Card } from './Components/Card.tsx';
 
 const menu: Chai[] = [
   {id: 1, name: "Masala", price: 30},
@@ -34,6 +34,12 @@ function App() {
       onSubmit={(order) => {
         console.log("Placed", order.name, order.cups)
       }}
+      />
+     </div>
+     <div>
+      <Card 
+      title="Chai aur Typescript"
+      footer= {<button>Order Now</button>}
       />
      </div>
     </>
